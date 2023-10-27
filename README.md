@@ -7,8 +7,8 @@
 **model.add(Conv2D(32, (3, 3), input_shape=(image_size[0], image_size[1], 3), activation='relu'):** Aqui, você está adicionando a primeira camada convolucional à rede. Os parâmetros são os seguintes:
 
 _Conv2D(32, (3, 3):_ Esta camada possui 32 filtros de convolução, cada um com uma janela (kernel) de 3x3.<br>
-_input_shape=(image_size[0], image_size[1], 3):_ Este é o formato de entrada da imagem. image_size é uma variável que deve conter as dimensões da imagem (altura, largura e canais de cor). Nesse caso, a imagem tem 3 canais de cor (provavelmente, RGB).<br>
-_activation='relu':_ A função de ativação usada na camada é a função ReLU (Rectified Linear Unit), que é uma função não linear que ajuda a rede a aprender relações complexas nos dados.
+_input_shape=(image_size[0], image_size[1], 3):_ Este é o formato de entrada da imagem. image*size é uma variável que deve conter as dimensões da imagem (altura, largura e canais de cor). Nesse caso, a imagem tem 3 canais de cor (provavelmente, RGB).<br>
+\_activation='relu':* A função de ativação usada na camada é a função ReLU (Rectified Linear Unit), que é uma função não linear que ajuda a rede a aprender relações complexas nos dados.
 
 **model.add(MaxPooling2D(pool_size=(2, 2)):** Esta linha adiciona uma camada de MaxPooling à rede. O MaxPooling é usado para reduzir o tamanho espacial das representações geradas pelas camadas convolucionais anteriores. Neste caso, uma janela de 2x2 é usada para realizar o pooling.
 
