@@ -26,7 +26,7 @@ for filename in files:
         # Redimensione a imagem
         img = img.resize(new_size)
         
-        # Reduza a qualidade da imagem em 10%
+        # Reduza a qualidade da imagem em 50%
         img.save(os.path.join(output_folder, "001_" + filename), quality=50)
 
 print("Redimensionamento e redução de qualidade concluídos.")
