@@ -1,6 +1,3 @@
-# Incluir todos os diretórios dentro de "data"
-/data/*
-
 # Excluir imagens dentro de todos os diretórios
 *.jpg
 *.jpeg
