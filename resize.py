@@ -2,10 +2,10 @@ from PIL import Image
 import os
 
 # Pasta de entrada com as imagens originais
-input_folder = "./"
+input_folder = "./test"
 
 # Pasta de saída para as imagens redimensionadas e com qualidade reduzida
-output_folder = "./"
+output_folder = "./test"
 
 # Tamanho desejado
 new_size = (150, 150)
