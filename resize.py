@@ -17,16 +17,19 @@ if not os.path.exists(output_folder):
 # Liste todos os arquivos na pasta de entrada
 files = os.listdir(input_folder)
 
-# Itere sobre os arquivos na pasta de entrada
+# Percorra os arquivos na pasta de entrada
 for filename in files:
-    if filename.endswith(('.jpg', '.jpeg', '.png', '.gif')):
+    # Verifique se o arquivo é uma imagem suportada
+    if filename.lower().endswith(('.jpg', '.jpeg', '.png', '.gif')):
         # Abra a imagem
         img = Image.open(os.path.join(input_folder, filename))
         
-        # Redimensione a imagem
+        # Redimensione a imagem para o novo tamanho desejado
         img = img.resize(new_size)
         
         # Reduza a qualidade da imagem em 50%
-        img.save(os.path.join(output_folder, "001_" + filename), quality=50)
+        output_filename = f"001_{filename}"
+        output_path = os.path.join(output_folder, output_filename)
+        img.save(output_path, quality=50)
 
 print("Redimensionamento e redução de qualidade concluídos.")
