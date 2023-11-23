@@ -23,3 +23,17 @@ _input_shape=(image_size[0], image_size[1], 3):_ Este é o formato de entrada da
 **model.add(Dropout(0.5)):** Aqui, é adicionada uma camada de dropout com uma taxa de 0,5. O dropout é uma técnica de regularização que ajuda a prevenir o overfitting, desligando aleatoriamente uma fração dos neurônios durante o treinamento.
 
 **model.add(Dense(1, activation='sigmoid'):** A última camada é uma camada totalmente conectada com um único neurônio e uma função de ativação sigmoid. Essa camada é comumente usada em tarefas de classificação binária, onde a saída é uma probabilidade entre 0 e 1, indicando a probabilidade de pertencer à classe positiva.
+
+### Explicando o script resize.py
+
+Esse código é útil para pré-processamento de imagens, especialmente quando você precisa padronizar tamanhos e reduzir o tamanho dos arquivos para economizar espaço, ou imagens geradas por IA.
+
+new_size = (150, 150)
+Aqui, você define o tamanho desejado para as imagens redimensionadas.
+
+if filename.endswith(('.jpg', '.jpeg', '.png', '.gif'))
+Verifica se o arquivo tem uma das extensões de imagem especificadas.
+
+img.save(os.path.join(output_folder, "001_" + filename), quality=50)
+Reduz a qualidade da imagem em 50% e salva a imagem redimensionada na pasta de saída. Para aproximar de imagens reais carregadas na internet.
+
