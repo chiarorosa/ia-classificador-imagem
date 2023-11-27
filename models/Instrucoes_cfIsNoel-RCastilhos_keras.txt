@@ -1,0 +1,25 @@
+O Modelo cfIsNoel-RCastilhos.keras foi gerado com uma DCNN (Deep Convolutional Neural Network).
+O Arquivo Original ficou em 174MB.
+O GITHUB não permite arquivos individuais com mais de 100MB.
+Originalmente o modelo foi treinado em ambiente linux e, para podermos subir para o GITHUB,
+foi necessário particionar o arquivo em partes menores.
+Para isso usamos o comando:
+
+	split -b 50m cfIsNoel-RCastilhos.keras cfIsNoel-RCastilhos_keras.part_
+
+Assim, geramos as partes:
+
+	cfIsNoel-RCastilhos_keras.part_aa
+	cfIsNoel-RCastilhos_keras.part_ab
+	cfIsNoel-RCastilhos_keras.part_ac
+	cfIsNoel-RCastilhos_keras.part_ad
+
+Para unir novamente estas partes, em ambiente linux, voce usa o seguinte comando:
+
+	cat cfIsNoel-RCastilhos_keras.part_* > cfIsNoel-RCastilhos.keras
+
+Caso seja preciso executar o processo em ambiente windows:
+
+	copy /b cfIsNoel-RCastilhos_keras.part_aa + cfIsNoel-RCastilhos_keras.part_ab + 
+			cfIsNoel-RCastilhos_keras.part_ac + cfIsNoel-RCastilhos_keras.part_ad cfIsNoel-RCastilhos.keras
+
