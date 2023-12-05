@@ -17,7 +17,7 @@
 *.xml
 *.pkl
 *.zip
-*.keras
+# *.keras
 
 *.jpg
 *.jpeg
